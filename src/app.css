@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+    --radius: 0.625rem;
+    /* Light mode - using lighter, more vibrant colors from the palette */
+    --background: #ffdcbb0; /* Warm off-white from palette */
+    --foreground: #2e222f; /* Deep purple-black for text */
+    --card: #ffffff; /* Pure white for cards */
+    --card-foreground: #3e3546; /* Slightly lighter than foreground */
+    --popover: #ffffff;
+    --popover-foreground: #2e222f;
+    --primary: #6e2727; /* Rich burgundy red */
+    --primary-foreground: #ffdcbb0;
+    --secondary: #91db69; /* Vibrant green */
+    --secondary-foreground: #2e222f;
+    --muted: #c7dcd0; /* Soft mint gray */
+    --muted-foreground: #625565; /* Medium purple-gray */
+    --accent: #fbb954; /* Warm golden yellow */
+    --accent-foreground: #2e222f;
+    --destructive: #ea4f36; /* Bright red-orange */
+    --border: #d5e04b; /* Using a softer version */
+    --input: #e8d099; /* Warm beige */
+    --ring: #4d65b4; /* Nice blue for focus states */
+    --chart-1: #ff79617; /* Coral */
+    --chart-2: #30e1b9; /* Turquoise */
+    --chart-3: #905ea9; /* Purple */
+    --chart-4: #fbb954; /* Golden */
+    --chart-5: #6e904e; /* Forest green */
+    --sidebar: #ffffff;
+    --sidebar-foreground: #2e222f;
+    --sidebar-primary: #6e2727;
+    --sidebar-primary-foreground: #ffdcbb0;
+    --sidebar-accent: #fbff86; /* Bright yellow */
+    --sidebar-accent-foreground: #2e222f;
+    --sidebar-border: #c7dcd0;
+    --sidebar-ring: #4d65b4;
+}
+
+.dark {
+    /* Dark mode - using deeper, richer colors from the palette */
+    --background: #2e222f; /* Deep purple-black */
+    --foreground: #ffdcbb0; /* Warm off-white */
+    --card: #3e3546; /* Slightly lighter purple-gray */
+    --card-foreground: #ffdcbb0;
+    --popover: #3e3546;
+    --popover-foreground: #ffdcbb0;
+    --primary: #30e1b9; /* Bright turquoise for dark mode */
+    --primary-foreground: #2e222f;
+    --secondary: #905ea9; /* Purple */
+    --secondary-foreground: #ffdcbb0;
+    --muted: #625565; /* Medium purple-gray */
+    --muted-foreground: #c7dcd0; /* Light mint gray */
+    --accent: #fbb954; /* Golden yellow stays vibrant */
+    --accent-foreground: #2e222f;
+    --destructive: #ea4f36; /* Bright red-orange */
+    --border: #625565; /* Subtle border */
+    --input: #3e3546; /* Input background */
+    --ring: #30e1b9; /* Turquoise for focus */
+    --chart-1: #4d9be6; /* Sky blue */
+    --chart-2: #91db69; /* Lime green */
+    --chart-3: #ff79617; /* Coral pink */
+    --chart-4: #a884f3; /* Lavender */
+    --chart-5: #fbb954; /* Golden */
+    --sidebar: #3e3546;
+    --sidebar-foreground: #ffdcbb0;
+    --sidebar-primary: #30e1b9;
+    --sidebar-primary-foreground: #2e222f;
+    --sidebar-accent: #625565;
+    --sidebar-accent-foreground: #ffdcbb0;
+    --sidebar-border: #625565;
+    --sidebar-ring: #30e1b9;
+}
+
+@theme inline {
+    --radius-sm: calc(var(--radius) - 4px);
+    --radius-md: calc(var(--radius) - 2px);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) + 4px);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+    --color-chart-1: var(--chart-1);
+    --color-chart-2: var(--chart-2);
+    --color-chart-3: var(--chart-3);
+    --color-chart-4: var(--chart-4);
+    --color-chart-5: var(--chart-5);
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
